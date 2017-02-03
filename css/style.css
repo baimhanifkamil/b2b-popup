@@ -408,7 +408,8 @@ form {
 
 
 /******mobile*******/
-@media (max-width: 500px){
+@media screen and (orientation:portrait){
+/*@media (max-width: 500px){*/
     
     .gradient-bg {
        margin: -400px 0px 0px 0px;
@@ -483,7 +484,7 @@ form {
 
 /* 13inch laptop */
 
-@media (min-width: 501px){
+@media (min-width: 501px) and (orientation:landscape){
     
     .branding-div {
       display: inline-block;
@@ -536,7 +537,7 @@ form {
 
 /* large screen */
 
-@media (min-width: 1024px){
+@media (min-width: 1024px) and (orientation:landscape){
 .branding-div {
       display: inline-block;
       margin-top: 58px;
