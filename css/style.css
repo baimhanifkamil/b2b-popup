@@ -408,7 +408,7 @@ form {
 
 
 /******mobile*******/
-@media screen and (orientation:portrait){
+@media all and (orientation:portrait){
 /*@media (max-width: 500px){*/
     
     .gradient-bg {
