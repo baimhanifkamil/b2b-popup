@@ -1,273 +1,180 @@
+// Resets
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-@font-face {
-    font-family: FuturaStd-Heavy;
-    src: url("../fonts/FuturaStd-Heavy.otf") format("opentype");
+form {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 @font-face {
-    font-family: FuturaStd-Book;
-    src: url("../fonts/FuturaStd-Book.otf") format("opentype");
+  font-family: FuturaStd-Heavy;
+  src: url("../fonts/FuturaStd-Heavy.otf") format("opentype");
 }
 
 @font-face {
-    font-family: AvenirLTStd-Black;
-    src: url("../fonts/AvenirLTStd-Black.otf") format("opentype");
+  font-family: FuturaStd-Book;
+  src: url("../fonts/FuturaStd-Book.otf") format("opentype");
 }
 
 @font-face {
-    font-family: AvenirLTStd-Roman;
-    src: url("../fonts/AvenirLTStd-Roman.otf") format("opentype");
-}
-/*---------------------------Fonts------------------*/
-
-// .b2b-popup{
-  
-//     position: fixed;
-//     top: 25%;
-//     left: 35%;
-//     transform: translate(-50%, -50%);
-//   /* 4^ to center */
- 
-//      -ms-transform: scale(0.4, 0.4); /* IE 9 */
-//     -webkit-transform: scale(0.4, 0.4); /* Safari */
-//     transform: scale(0.4, 0.4);
-// }
-
-// .b2b-popup{
-  
-//     position: fixed;
-//     top: 25%;
-//     left: 35%;
-//     transform: translate(-50%, -50%);
-//   /* 4^ to center */
- 
-//      -ms-transform: scale(0.4, 0.4); /* IE 9 */
-//     -webkit-transform: scale(0.4, 0.4); /* Safari */
-//     transform: scale(0.4, 0.4);
-// }
-
-.popup-container {
-    position:absolute;
-    margin:-30px 0px 0px -7px;
-    width: 1920px;
-    height: 1080px;
-    background-color:white;
-    clip: rect(0px,1920px,1080px,0px);
+  font-family: AvenirLTStd-Black;
+  src: url("../fonts/AvenirLTStd-Black.otf") format("opentype");
 }
 
-/* Mask: */
-.gradient-bg{
-
- width: 100%;
- height: 100%;
- position: absolute;
-
-  margin: -570px 0px 0px 560px;
-  /* Gradient: */
+@font-face {
+  font-family: AvenirLTStd-Roman;
+  src: url("../fonts/AvenirLTStd-Roman.otf") format("opentype");
 }
-  
-  .BG-Gradient-Circle{
-  background-image: linear-gradient(39deg, rgba(100,84,162,0.60) 4%, rgba(255,255,255,0.60) 47%);
+
+body {
+  position: relative;
+  font-family: "Avenir";
 }
-  .Fill-3{
-  /* This is the B2B Form gradient background */
-  position:absolute;
-  background: rgba(84,90,162,0.40);
-  margin:0px;
+
+.aside {
+  display: block;
+  height: 100vh;
+  position: absolute;
+  width: 300px;
+  padding: 50px;
+  left: 0;
+
+  .footer {
+    position: absolute;
+    bottom: 30px;
   }
 
-.branding-div{
- display: inline-block;
- margin-top:58px;
- margin-left:50px;
- width:355px; 
-/*  background:red; */
+  .animated-rocket {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+
+    .animated-rocket {
+      display: none
+    }
+
+    .footer {
+      left: 0;
+      right: 0;
+      width: 80%;
+      margin: auto;
+    }
+  }
 }
 
-.logo-div{
-  display: inline-block;
-  left:30px;
-  width:100%;
-  height:100%;
-/*   background:red; */
-  
+img.responsive {
+  max-width: 100%;
 }
 
-.form-title p {
-  /* Send us your details: */
-font-family: "AvenirLTStd-Roman";
-font-size: 18px;
-color: #909090;
-line-height: 21px;
+.main {
+  display: block;
+  width: 70%;
+  height: 100vh;
+  margin-left: 30%;
+  overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+    height: 100vh;
+
+    .gradient-bg {
+      transform: rotate(90deg);
+      width: 100%;
+      margin-top: -120px;
+    }
+  }
+
+  @media (max-width: 480px) {
+   .gradient-bg {
+      margin-top: -240px;
+    }
+  }
 }
 
-.animated-rocket{
- display:block;
- margin-top:409px;
- margin-left:5vw; /* or 124px*/
+.brand {
+  .title {
+    color: #909090;
+    font-size: 18px;
+    font-family: "Avenir";
+    line-height: 21px;
+  }
 }
 
-.circle-bg{
- width: 100%;
- height: 100%;
- position: absolute;
-  
-}
-.b2b-rocket{
- width: 100%;
- height: 100%;
- position: absolute;
- margin-top:55px;
-  
-}
+.animated-rocket {
+  position: relative;
 
-
-/***** Buttons  *****/
+  .rocket {
+    position: absolute;
+    bottom: 0;
+  }
+}
 
 .button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-right: 5px;
-    margin-bottom: 5px;
-    border-radius: 4px;
-    box-shadow: 2px 2px 5px 0 rgba(99, 99, 99, 0.15);
-    font-family: "FuturaStd-Heavy";
-    font-size: 15px;
-    &.primary {
-        position: relative;
-        width: 200px;
-        height: 45px;
-        color: #FFFFFF !important;
-        border: 2px solid transparent;
-        box-shadow: inset 0 -4px 0 0 #86B882;
-        background-color: #96CD91;
-        background-clip: padding-box;
-        padding: 2px;
-    }
-    &.primary::after {
-        position: absolute;
-        top: -2px;
-        bottom: -2px;
-        left: -2px;
-        right: -2px;
-        background: linear-gradient(#ACE2A7, #86B882);
-        border-radius: 4px;
-        content: '';
-        z-index: -1;
-    }
-    &.secondary {
-        width: 200px;
-        height: 45px;
-    }
-}
-
-// [ Change Secondary Button Color ]
-@mixin btn-color($colorHEX) {
-    color: rgba($colorHEX, 1);
-    border: 2px solid rgba($colorHEX, 1);
-    box-shadow: inset 0 -4px 0 0 rgba($colorHEX, 0.25);
-    transition: all .1s ease;
-    &:hover {
-        background-color: lighten($colorHEX, 15%);
-    }
-}
-
-
-// ------------------custom round button--------------
-
-.button-popup-call {
-  font-family: "FuturaStd-Heavy";
-  font-size: 0.9em;
-  background: #96cd91;
-  width: 372px;
-  color: white;
-  display: block;
-  padding: 1em;
-  border-radius: 5em;
   text-transform: uppercase;
-  text-align:center;
+  text-align: center;
   text-decoration: none;
-  letter-spacing: 0.15em;
+  font-size: 0.9em;
   box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.3);
+  background: #96cd91;
+  color: white;
+  padding: 1em;
+  letter-spacing: 0.15em;
   transition: color 0.6s, box-shadow 0.3s, transform 0.3s;
+
   &:hover {
     box-shadow: 0 3px 5px -5px rgba(0, 0, 0, 0.3);
     transform: translateY(-1px);
     color: #e6e6e6;
   }
-}
 
-.button-popup-schedule {
-  font-family: "FuturaStd-Heavy";
-  margin-top:10px;
-  font-size: 0.9em;
-  background: #96cd91;
-  width: 372px;
-  color: white;
-  display: block;
-  padding: 1em;
-  border-radius: 5em;
-  text-transform: uppercase;
-  text-align:center;
-  text-decoration: none;
-  letter-spacing: 0.15em;
-  box-shadow: 0 15px 20px -10px rgba(0, 0, 0, 0.3);
-  transition: color 0.6s, box-shadow 0.3s, transform 0.3s;
-  &:hover {
-    box-shadow: 0 3px 5px -5px rgba(0, 0, 0, 0.3);
-    transform: translateY(-1px);
-    color: #e6e6e6;
+  &.is-round {
+    border-radius: 5em;
+  }
+
+  &.is-block {
+    display: block;
   }
 }
 
-
-
-.popup-btn-group{
-  position:absolute;
-  width:220px;
-  height:130px;
-  margin-left:4.3%;
-  margin-top:370px;
+.popup-button-group {
+  .button:not(:last-child) {
+    margin-bottom: 8px;
+  }
 }
 
-.form{
-  position:absolute;
-  margin-top:900px;
-  margin-left:1579px;
+.input-area .input-name {
+//   margin:20px;
+//   background-color:transparent;
+//   border-color:transparent;
+//   border-style: solid;
+//   border-bottom: thick solid white;
+//   height:75px;
+//   width:1017px;
+//   font-size:34px;
+//   color:white;
 }
-
-.input-area{
-  position:absolute;
-  margin: 200px 0 0 690px;
-  width:1100px;
-  height:500px;
-  // background:red;
-}
-
-.input-area .input-name{
-  margin:20px;
-  background-color:transparent;
-  border-color:transparent;
-  border-style: solid;
-  border-bottom: thick solid white;
-  height:75px;
-  width:1017px;
-  font-size:34px;
-  color:white;
-}
-
-
-
-// ----------------INPUT FORM AREA START-----------
 
 $background: #484984;
 $dark: #484984;
 $primary: #96CD91;
 
-input, 
-button {
-  font-family: "FuturaStd-Heavy";
+@for $i from 1 through 5 {
+  label[for="input-#{$i}"] .nav-dot {
+      margin-top: -150px + (25 * $i);
+  }
+}
+
+input, button {
   position: fixed;
   top: 50%;
   left: 60%;
@@ -298,7 +205,6 @@ input::selection {
 
 button,
 .signup-button {
-  font-family: "FuturaStd-Heavy";
   padding: .25em 0;
   border: 0;
   outline: 0;
@@ -367,7 +273,7 @@ input:focus + label .nav-dot:before {
 .signup-button-trigger {
   position: fixed;
   top: 50%;
-  left: 70%; 
+  left: 70%;
   // for mobile,left: 50%;
   transform: translate(-50%, -100%);
   width: 40vw;
@@ -405,16 +311,16 @@ input:focus + label .nav-dot:before {
 .nav-dot {
   cursor: pointer;
   position: fixed;
-  padding: .625rem 1.25rem .625rem .625rem;  
+  padding: .625rem 1.25rem .625rem .625rem;
   top: 52%;
   right: 1.25rem;
   &:before {
-    content: '';  
-    display: inline-block;  
+    content: '';
+    display: inline-block;
     border-radius: 50%;
     width: .375rem;
     height: .375rem;
-    margin-right: .625rem;  
+    margin-right: .625rem;
     position: fixed;
     background-color: lighten($background, 3%);
     border: 0;
@@ -428,33 +334,3 @@ input:focus + label .nav-dot:before {
     background-color: darken($primary, 5%);
   }
 }
-
-@for $i from 1 through 5 {
-  label[for="input-#{$i}"] .nav-dot {
-      margin-top: -150px + (25 * $i);
-  }
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-  background-image: linear-gradient(to bottom right, $background 0%, $dark 100%);
-  font-family: 'Lato', sans-serif;
-}
-
-form {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-
-
-
-// ----------------INPUT FORM AREA END-----------
